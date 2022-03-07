@@ -17,6 +17,15 @@ conection.connect(function (error){
 })
 
 
+let sql0 ="SELECT AVG(mark) FROM marks WHERE subject_id = 1 ";
+conection.query(sql0, function(err, result){
+    if (err) {
+        console.log(err)
+    } else {
+        console.log("Dato borrado")
+        console.log(result)
+    }
+})
 
 let sql1 ="DELETE FROM marks WHERE date > \"2021-01-01\" AND date < \"2021-12-31\" AND mark > 5";
 conection.query(sql1, function(err, result){
@@ -27,6 +36,8 @@ conection.query(sql1, function(err, result){
         console.log(result)
     }
 })
+
+
 
 
 let sql2 = "SELECT * FROM students WHERE admission_date > \"2022-01-01\"";
