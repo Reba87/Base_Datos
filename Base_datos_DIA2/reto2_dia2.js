@@ -42,7 +42,7 @@ conection.query(sql2, function(err, result){
 })
 
 /*RETO 2-3*/
-let sql3 = "SELECT AVG(mark) AS media_nota,student_id FROM marks WHERE date BETWEEN \"2020-01-01\" AND \"2020-12-31\" GROUP BY subject_id"
+let sql3 = "SELECT AVG(mark) AS media_nota,student_id FROM marks WHERE date BETWEEN \"2020-01-01\" AND \"2020-12-31\" GROUP BY student_id"
 conection.query(sql3, function(err, result){
     if (err) {
         console.log(err)
